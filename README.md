@@ -1,2 +1,125 @@
-# GSoC-2025
-Work I did under Google Summer of Code 2025 with Sugarlabs
+# Google Summer of Code 2025
+# Sugar Labs
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8d30793e-af8c-4ea3-af39-914392df416e" height="300px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+## Contributor Information  
+
+- **Name:** Nikhil Bhatt  
+- **Email:** [bhattnik442@gmail.com](mailto:bhattnik442@gmail.com)  
+- **GitHub:** [BeNikk](https://github.com/BeNikk)  
+- **Organization:** [Sugar Labs](https://www.sugarlabs.org/)  
+- **Project Repository:** [Git Backend For Music Blocks & Turtle Blocks](https://github.com/BeNikk/musicblocks-backend)  
+- **Mentors:** [Walter Bender](https://github.com/walterbender), [Sumit Srivastava](https://github.com/sum2it)   
+- **Project Duration:** 350 hours
+---
+
+## Description
+
+This project introduces a Git-based backend for Music Blocks and Turtle Blocks, replacing the older Planet system for project storage. Students can now create, save, and manage their projects in a centralized Sugar Labs GitHub repository, with support for commits, edits, forks, history navigation, and downloads. By integrating Git version control, the system not only improves project management but also fosters collaboration, reflection, and portfolio creation, aligning with Sugar Labs’ educational philosophy.
+
+## Background
+
+At Sugar Labs, learning is deeply tied to creativity, reflection, and collaboration. Students are encouraged not only to create projects but also to think about how their work evolves over time and how they can learn from others. While students can already save and share their projects, there was an opportunity to enhance this experience by providing more structured ways to explore, manage, and interact with their work.
+
+This project introduces a system that allows students to maintain a record of their project progress, explore different versions, collaborate with peers, and build a portfolio of their learning journey. By embedding these capabilities into Turtle Blocks and Music Blocks, students can reflect on their creative process, learn from others’ projects, and engage more deeply with their own growth, all in an intuitive, educational environment.
+
+## Goals
+
+The main objectives of this project were to enhance the project management and learning experience in Music Blocks and Turtle Blocks by introducing a Git-based backend. Specifically, the project aimed to:
+
+- **Replace the Planet system:** Improve the existing project storage system to support version control and better project management.
+- **Enable Project Commits and Edits:** Allow students to create, save, and update their own projects, with a record of all changes.
+- **Support Forking of Projects:** Let students explore and build upon other users’ projects, fostering collaboration and peer learning.
+- **Provide Project History Navigation:** Enable students to view the complete history of a project, reflecting on how it has evolved over time.
+- **Allow Project Downloads:** Give students the option to download their projects for offline use or portfolio creation.
+- **Integrate Seamlessly:** Ensure all features work smoothly within Music Blocks and Turtle Blocks, maintaining an intuitive educational experience.
+
+## Demonstration
+
+To showcase the features of the Git backend system, including global and local projects, commits, forks, and history navigation, watch the demonstration video below:
+
+[![Watch the Demo](https://img.youtube.com/vi/6HJ91HYKEiQ/0.jpg)](https://www.youtube.com/watch?v=6HJ91HYKEiQ "Git Backend Demonstration Video")
+
+## Technical Implementation
+
+### Phase 1: Backend Setup & Repository Creation
+
+The initial phase focused on establishing a robust backend system to support students’ project creation, editing, and collaboration within Music Blocks and Turtle Blocks.
+
+- **GitHub Integration:** Implemented GitHub App authentication using JWT and installation tokens, allowing secure creation of repositories within the Sugar Labs organization.
+- **Repository Initialization:** Each student project is initialized with essential files (`README.md`, `projectData.json`, `metaData.json`) to store project content, metadata, and hashed keys for ownership verification.
+- **Secure Project Editing:** Developed a key-based authentication system to ensure only the original student could edit their project.
+- **Forking & Collaboration:** Enabled students to fork public projects, maintaining original content and metadata, fostering peer learning and exploration.
+- **Pull Request Support:** Implemented backend routes for submitting updates from forked projects to the original repository, allowing maintainers to view and merge contributions efficiently.
+- **Scalable Architecture:** Organized backend structure for maintainability, centralized pull request handling, and reduced frontend complexity, ensuring a smooth experience for students.
+
+This phase laid the foundation for a student-centered system where learners can securely manage, share, and collaborate on projects while reflecting on their work and learning from peers.
+![How projects are stored inside the centralised Github Repo](./constants/repo.png)
+
+
+### Phase 2: Frontend Integration & Enhanced Collaboration
+
+The second phase focused on connecting the Git backend with the user interface and improving collaborative features for students.
+
+- **Frontend-Backend Integration:** Implemented API calls to allow project creation, editing, and forking directly from the Music Blocks UI.
+- **Project Dashboard:** Developed a dashboard listing all projects (original and forked) with metadata like project name, fork status, and last updated time. Students can open, edit, or fork projects seamlessly.
+- **Preserving Commit History:** Enhanced fork functionality to retain full commit history using Git CLI, allowing students to trace project evolution over time.
+- **Secure Forking & Metadata:** Forked projects include metadata linking back to the original repository and a new hashed key for secure ownership and editing rights.
+- **Commit History & Version Travel:** Added backend routes and frontend modals for students to view and load previous commits, enabling reflective learning and exploration of project changes.
+- **Pull Request Infrastructure:** Built backend routes to support submitting updates from forked projects to original repositories, preparing the system for future frontend PR integration.
+
+This phase made the system interactive and educational, empowering students to manage, reflect on, and collaborate on their projects while exploring version control concepts in a safe and guided environment.
+
+![Global Projects page](./constants/projects-page.png)
+
+
+### Phase 3: Project Management & UX Enhancements
+
+This phase focused on improving how students manage, describe, and organize their projects, along with enhancing the user experience for easier navigation and interaction.
+
+- **Project Data Endpoint:** Created a backend route to fetch project data without creating a fork, allowing students to preview projects in Music Blocks before deciding to fork.
+- **Custom Project Descriptions:** Enabled students to add descriptions to their projects, similar to the existing Planet page, enhancing documentation and self-reflection.
+- **Fork Button in UI:** Added a "Fork This Project" button that retains full commit history and allows students to continue work on others’ projects in their own repositories.
+- **Local Projects Page:** Developed a page for students to view, switch between, and edit all projects they created or forked. Local storage is used to maintain project names, keys, and descriptions for persistence.
+- **Theme Feature (GitHub Topics):** Implemented repository themes such as music, education, and learning, improving project categorization and discoverability on GitHub.
+- **Authenticated Repository Fetch:** Added a backend route to fetch all repositories using authenticated access, bypassing GitHub API rate limits and ensuring reliable listing of projects.
+- **Updated Projects Page:** Enhanced the UI to display themes and project descriptions, making it easier for students to identify and filter projects visually.
+
+This phase significantly enhanced project organization, usability, and visibility, allowing students to manage multiple projects efficiently while providing an intuitive interface for exploring and contributing to Music Blocks.
+
+### Phase 4: Testing & Documentation
+
+This phase focused on ensuring backend reliability, improving API maintainability, and creating comprehensive documentation for both backend and frontend.
+
+- **Backend Testing with Jest:**  
+  - Wrote 160+ individual tests covering core API functionality.  
+  - Mocked controllers to isolate logic from external dependencies.  
+  - Covered happy paths and edge cases to ensure robust API behavior.  
+  - Challenges addressed included test isolation, parameter inconsistencies, and large test suite organization.
+
+- **API Restructuring and Optimization:**  
+  - Refactored route definitions for better logical grouping and maintainability.  
+  - Standardized error handling and response formats.  
+  - Optimized request flows to reduce unnecessary API calls.
+
+- **Backend Documentation:**  
+  - Created a detailed README with backend purpose, architecture, and tech stack (Node.js, Express, TypeScript).  
+  - Documented all API endpoints, including create, edit, fork, forkHistory, createPR, openPR, commitHistory, and getProjectData.  
+  - Included setup instructions, GitHub App integration, metadata structures, and security best practices.  
+  - Added developer instructions for building, linting, and running tests.
+
+- **Frontend Documentation:**  
+  - Explained integration with Git-backed backend and UI workflows (initialize repo, push changes, fork, browse projects, download ZIPs).  
+  - Documented frontend API contracts, localStorage usage, and legacy Planet replacement strategies.  
+  - Included manual test checklists and troubleshooting tips.
+
+- **Developer Experience Improvements:**  
+  - Structured documentation with flow diagrams and examples for easy onboarding.  
+  - Ensured consistency between frontend and backend documentation.  
+  - Made the project setup self-contained to reduce reliance on tribal knowledge.
+
+### Flow chart for the project architecture
+![Flow chart showcasing how the system works](./constants/project-flow.webp)
