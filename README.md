@@ -191,3 +191,48 @@ The project leverages modern technologies to ensure a scalable, maintainable, an
 | Week 10 | 2025-08-04 – 2025-08-10 | Comprehensive backend testing with Jest, API restructuring and optimization. | [Week 10](https://www.sugarlabs.org/news/all/2025-08-10-gsoc-25-nikhilbhatt-week10) |
 | Week 11 | 2025-08-11 – 2025-08-17 | Detailed backend and frontend documentation created, improved developer experience. | [Week 11](https://www.sugarlabs.org/news/all/2025-08-17-gsoc-25-nikhilbhatt-week11) |
 | Week 12 | 2025-08-18 – 2025-08-24 | Feedback incorporation, final polishing. | [Week 12](#) |
+
+## Project Resources & Code
+
+- **Backend Code:** Complete backend implementation of the Git system for Music Blocks & Turtle Blocks.  
+  [GitHub Repo](https://github.com/BeNikk/musicblocks-backend)
+
+- **Backend README:** Detailed backend documentation including setup, API endpoints, and development instructions.  
+  [Backend README](https://github.com/BeNikk/musicblocks-backend/blob/main/README.md)
+
+- **Frontend Branch:** Frontend integration branch with Music Blocks UI connected to Git backend.  
+  [Frontend Branch](https://github.com/BeNikk/musicblocks/tree/git-musicblocks-frontend)
+
+- **Frontend README:** Documentation for frontend setup, API integration, and UI flows.  
+  [Frontend README](https://github.com/BeNikk/musicblocks/blob/git-musicblocks-frontend/GITHUB_BACKEND_README.md)
+
+- **Demo Video:** Video demonstration of the Git backend features, including commits, forks, and history navigation.  
+  [Watch Demo](https://www.youtube.com/watch?v=6HJ91HYKEiQ)
+
+## Learning & Acknowledgments
+
+### Key Learnings
+
+- **Version Control in Education:** Gained a deep understanding of how Git can be integrated into educational tools to enhance project management, collaboration, and reflection.
+- **Backend Development:** Learned advanced backend patterns using Node.js, Express, and TypeScript, including authentication, API design, and GitHub App integration.
+- **Frontend-Backend Integration:** Understood the importance of seamless communication between frontend and backend, handling API contracts, local storage management, and UI state.
+- **Testing & Documentation:** Mastered writing comprehensive Jest tests for API reliability and creating detailed, developer-friendly documentation to simplify onboarding.
+- **UX & Educational Perspective:** Learned how to design features that are intuitive for students while promoting learning outcomes, reflection, and collaboration.
+
+## Future Plans
+
+- **Educate Students on Git:** Introduce guided tutorials and interactive features within Music Blocks and Turtle Blocks to help students understand version control and Git concepts.  
+- **Smooth Transition from Planet:** Fully transition existing Planet projects to the new Git backend, ensuring students retain access to their previous work.  
+- **Enhanced Collaboration & Reflection:** Add features to encourage students to explore, fork, and contribute to peers' projects while reflecting on their own progress and learning journey.
+
+
+### Acknowledgments
+
+I would like to extend my heartfelt thanks to:
+
+- **Walter Bender & Sumit Srivastava:** For their continuous mentorship, guidance, and insightful feedback throughout the project.  
+- **Sugar Labs Community:** For their support, discussions, and encouragement that helped shape the project.  
+- **Open Source Tools & Resources:** GitHub, Jest, and other open-source libraries that made the development process smoother and more efficient.  
+
+Their support was invaluable in making the Git backend for Music Blocks and Turtle Blocks a successful and educational experience.
+Overall, Google summer of Code 2025 was a great learning experience for me.
