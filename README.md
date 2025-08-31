@@ -123,3 +123,71 @@ This phase focused on ensuring backend reliability, improving API maintainabilit
 
 ### Flow chart for the project architecture
 ![Flow chart showcasing how the system works](./constants/project-flow.webp)
+
+## Components
+
+The project is divided into several key components, each handling specific responsibilities to ensure a modular, maintainable, and scalable system.
+
+### 1. Backend
+- Handles all server-side logic, API endpoints, key generation and management and integration with GitHub.
+- Responsible for project creation, editing, forking, commit history management, and pull request handling.
+- Ensures security and access control using JWT and GitHub App authentication.
+- Manages metadata, project storage, and interaction with the GitHub repositories.
+
+### 2. Frontend
+- Integrated with Music Blocks UI to provide seamless project management for students.
+- Allows students to create, edit, fork, and browse projects directly from the interface.
+- Displays global and local projects, project descriptions, and commit history.
+- Handles local storage for quick access to user projects and project metadata.
+
+### 3. Project Storage & GitHub Integration
+- Centralized repository structure in the Sugar Labs GitHub organization.
+- Initializes projects with essential files (`projectData.json`, `metaData.json`, `README.md`).
+- Supports version control, commit history, fork tracking, and pull request workflows.
+- Maintains metadata for secure editing and collaboration.
+
+### 4. Testing
+- Ensures reliability of backend APIs using Jest.
+- Includes over 160 tests covering core functionality, edge cases, and API behavior.
+- Mocks controllers to isolate logic from external dependencies.
+
+### 5. Documentation
+- Comprehensive guides for backend setup, frontend integration, API usage, and developer instructions.
+- Includes flow diagrams, request/response examples, and setup instructions for contributors.
+- Ensures the system is easy to understand and extend for future developers.
+
+## Tech Stack
+
+The project leverages modern technologies to ensure a scalable, maintainable, and educationally effective system.
+
+### Backend
+- **Language:** TypeScript  
+- **Runtime:** Node.js  
+- **Framework:** Express.js  
+- **Git Integration:** Git CLI, GitHub REST API via Octokit  
+- **Testing:** Jest  
+- **Authentication:** GitHub App Authentication (JWT & installation tokens) (for the backend) 
+- **Data Storage:** JSON files (`projectData.json`, `metaData.json`) for project content and metadata
+
+### Frontend
+- **Integration:** Music Blocks UI  
+- **Languages:** JavaScript, HTML, CSS  
+- **Local Storage:** Browser localStorage for persisting project data  
+- **UI Features:** Fork button, project dashboard, commit history modals, project descriptions, theme display
+
+## Project Timeline
+
+| Week | Dates           | Milestones & Achievements | Blog / Report Link |
+|------|----------------|---------------------------|------------------|
+| Week 1 | 2025-06-01 – 2025-06-07 | Project setup, discussion with mentors, familiarization with Music Blocks and GitHub API. | [Week 1](https://www.sugarlabs.org/news/all/2025-06-08-gsoc-25-Nikhil-Bhatt-week01) |
+| Week 2 | 2025-06-08 – 2025-06-14 | Initial backend setup, GitHub App authentication implemented. | [Week 2](https://www.sugarlabs.org/news/all/2025-06-10-gsoc-25-nikhilbhatt-week02) |
+| Week 3 | 2025-06-15 – 2025-06-21 | Repository creation flow, project metadata structure defined. | [Week 3](https://www.sugarlabs.org/news/all/2025-06-17-gsoc-25-nikhilbhatt-week03) |
+| Week 4 | 2025-06-22 – 2025-06-28 | Project commit and edit endpoints implemented, basic frontend integration started. | [Week 4](https://www.sugarlabs.org/news/all/2025-06-29-gsoc-25-nikhilbhatt-week04) |
+| Week 5 | 2025-06-29 – 2025-07-05 | Forking projects implemented, secure key-based editing introduced. | [Week 5](https://www.sugarlabs.org/news/all/2025-07-06-gsoc-25-nikhilbhatt-week05) |
+| Week 6 | 2025-07-06 – 2025-07-12 | Pull request backend routes prepared, improved frontend integration. | [Week 6](https://www.sugarlabs.org/news/all/2025-07-13-gsoc-25-nikhilbhatt-week06) |
+| Week 7 | 2025-07-13 – 2025-07-20 | Project data endpoint added, custom project descriptions, fork button UI implemented. | [Week 7](https://www.sugarlabs.org/news/all/2025-07-20-gsoc-25-nikhilbhatt-week07) |
+| Week 8 | 2025-07-21 – 2025-07-27 | Local Projects page added, multiple project management with localStorage. | [Week 8](https://www.sugarlabs.org/news/all/2025-07-27-gsoc-25-nikhilbhatt-week08) |
+| Week 9 | 2025-07-28 – 2025-08-03 | GitHub topics (themes) feature added, authenticated repository fetch implemented, projects page updated. | [Week 9](https://www.sugarlabs.org/news/all/2025-08-03-gsoc-25-nikhilbhatt-week09) |
+| Week 10 | 2025-08-04 – 2025-08-10 | Comprehensive backend testing with Jest, API restructuring and optimization. | [Week 10](https://www.sugarlabs.org/news/all/2025-08-10-gsoc-25-nikhilbhatt-week10) |
+| Week 11 | 2025-08-11 – 2025-08-17 | Detailed backend and frontend documentation created, improved developer experience. | [Week 11](https://www.sugarlabs.org/news/all/2025-08-17-gsoc-25-nikhilbhatt-week11) |
+| Week 12 | 2025-08-18 – 2025-08-24 | Feedback incorporation, final polishing. | [Week 12](#) |
